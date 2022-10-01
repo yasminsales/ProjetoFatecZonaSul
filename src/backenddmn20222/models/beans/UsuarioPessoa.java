@@ -12,8 +12,8 @@ package backenddmn20222.models.beans;
 public class UsuarioPessoa  {
         
     private int id;
-    private int idUsuario;
     private int idPessoa;
+    private int idUsuario;
     private String obs;
     private Usuario usu;
     private Pessoa pes;
@@ -26,19 +26,22 @@ public class UsuarioPessoa  {
         this.obs = obs;
     }
 
-    public UsuarioPessoa(int idUsuario, int idPessoa, String obs) {
-        this.idUsuario = idUsuario;
+    public UsuarioPessoa(int idPessoa, int idUsuario, String obs) {
         this.idPessoa = idPessoa;
+        this.idUsuario = idUsuario;
         this.obs = obs;
     }
 
-    public UsuarioPessoa(int id, int idUsuario, int idPessoa, String obs) {
+    public UsuarioPessoa(int id, int idPessoa, int idUsuario, String obs) {
         this.id = id;
-        this.idUsuario = idUsuario;
         this.idPessoa = idPessoa;
+        this.idUsuario = idUsuario;
         this.obs = obs;
     }
 
+    
+    
+    
     public int getId() {
         return id;
     }

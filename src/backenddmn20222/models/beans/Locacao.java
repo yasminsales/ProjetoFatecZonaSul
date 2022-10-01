@@ -9,11 +9,12 @@ package backenddmn20222.models.beans;
  *
  * @author lab04aluno
  */
-public class Logradouro {
+public class Locacao {
     
-    int id;
-    String end;
-    String cep;
-    String Comp;
+    private int id;
+    private int idImovel;
+    private int idLogradouro;
+    private int idPessoa;
+    private String obs;
     
 }

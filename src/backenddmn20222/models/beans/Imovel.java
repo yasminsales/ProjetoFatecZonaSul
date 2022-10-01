@@ -9,11 +9,6 @@ package backenddmn20222.models.beans;
  *
  * @author lab04aluno
  */
-public class Logradouro {
-    
-    int id;
-    String end;
-    String cep;
-    String Comp;
+public class Imovel {
     
 }

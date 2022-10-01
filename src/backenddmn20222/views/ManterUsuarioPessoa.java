@@ -42,7 +42,7 @@ public class ManterUsuarioPessoa {
     }
 
     
-    public static void inserir() {
+    public static void inserir() throws SQLException, ClassNotFoundException {
         int idUsuario = Integer.parseInt(JOptionPane.showInputDialog("IDUSUARIO"));
         int idPessoa = Integer.parseInt(JOptionPane.showInputDialog("IDPESSOA"));
         String obs = JOptionPane.showInputDialog("OBS");
@@ -52,7 +52,7 @@ public class ManterUsuarioPessoa {
         JOptionPane.showMessageDialog(null, usupesSaida.toString());
     }
     
-    public static void alterar() {
+    public static void alterar() throws SQLException, ClassNotFoundException {
         int id = Integer.parseInt(JOptionPane.showInputDialog("ID"));
         int idUsuario = Integer.parseInt(JOptionPane.showInputDialog("IDUSUARIO"));
         int idPessoa = Integer.parseInt(JOptionPane.showInputDialog("IDPESSOA"));
@@ -72,7 +72,7 @@ public class ManterUsuarioPessoa {
         
     }
     
-    public static void excluir() {
+    public static void excluir() throws SQLException, ClassNotFoundException {
         int id = Integer.parseInt(JOptionPane.showInputDialog("ID"));
         UsuarioPessoa usupesEnt = new UsuarioPessoa(id);
         ControllerUsuarioPessoa contUsuPes = new ControllerUsuarioPessoa();
@@ -85,7 +85,11 @@ public class ManterUsuarioPessoa {
         UsuarioPessoa usupesEnt = new UsuarioPessoa(obs);
         ControllerUsuarioPessoa contUsuPes = new ControllerUsuarioPessoa();
         List<UsuarioPessoa> listaUsuarioPessoa = contUsuPes.listar(usupesEnt);
-        JOptionPane.showMessageDialog(null, listaUsuarioPessoa.get(1).toString());
+        for(UsuarioPessoa usuPes: listaUsuarioPessoa) {
+            JOptionPane.showMessageDialog(null, usuPes.toString());
+            JOptionPane.showMessageDialog(null, usuPes.getPes().toString());
+            JOptionPane.showMessageDialog(null, usuPes.getUsu().toString());
+        }
     }
     
 }

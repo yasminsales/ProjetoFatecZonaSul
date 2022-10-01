@@ -23,13 +23,13 @@ public class ControllerUsuarioPessoa {
     ControllerPessoa contPes;
     DaoUsuarioPessoa daoUsuPes;
     
-    public UsuarioPessoa inserir(UsuarioPessoa usupesEnt) {
+    public UsuarioPessoa inserir(UsuarioPessoa usupesEnt) throws SQLException, ClassNotFoundException {
         daoUsuPes = new DaoUsuarioPessoa();
         usupesEnt = daoUsuPes.inserir(usupesEnt);
         return usupesEnt;
     }
 
-    public UsuarioPessoa alterar(UsuarioPessoa usupesEnt) {
+    public UsuarioPessoa alterar(UsuarioPessoa usupesEnt) throws SQLException, ClassNotFoundException {
         daoUsuPes = new DaoUsuarioPessoa();
         usupesEnt = daoUsuPes.alterar(usupesEnt);
         return usupesEnt;
@@ -49,7 +49,7 @@ public class ControllerUsuarioPessoa {
         return listaUsuPesRetorno;
     }
 
-    public UsuarioPessoa excluir(UsuarioPessoa usupesEnt) {
+    public UsuarioPessoa excluir(UsuarioPessoa usupesEnt) throws SQLException, ClassNotFoundException {
         daoUsuPes = new DaoUsuarioPessoa();
         usupesEnt = daoUsuPes.excluir(usupesEnt);
         return usupesEnt;
@@ -68,7 +68,7 @@ public class ControllerUsuarioPessoa {
         contPes = new ControllerPessoa();
         usupesSaida.setPes(contPes.buscar(pes));
 
-        return usupesEnt;
+        return usupesSaida;
     }
 
 

@@ -1,4 +1,8 @@
-
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package backenddmn20222.models.daos;
 
 import backenddmn20222.models.beans.Pessoa;
@@ -11,6 +15,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ *
+ * @author lab04aluno
+ */
 public class DaoPessoa {
     
     private final Connection c;
